@@ -83,7 +83,7 @@ class Laravel implements Adapter
 
         $this->router->setRoutes($routes);
 
-        $router = clone $this->router;
+        $router = \Dingo\Api\Illuminate\Routing\Router::clone($this->router);
 
         $response = $router->dispatch($request);
 
